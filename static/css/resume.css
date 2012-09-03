@@ -11,7 +11,11 @@
 	margin-bottom: 5px;
 }
 
-.job-name, .skill-type {
+.job-name, .skill-type, .project-name, .activity-title {
 	font-weight: bold;
+}
+
+ul {
+	margin-bottom: 0px;
 }
 
