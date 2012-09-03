@@ -1,10 +1,17 @@
+.container {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
 .name {
 	margin-left: 0px;
+	padding-bottom: 5px;
 }
 
 .details {
 	border-bottom: 1px solid black;
-	margin-bottom: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 .school, .job, .activity, .skill, .project {
@@ -13,6 +20,10 @@
 
 .job-name, .skill-type, .project-name, .activity-title {
 	font-weight: bold;
+}
+
+.section h3 {
+	text-transform: uppercase;
 }
 
 ul {
