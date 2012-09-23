@@ -29,3 +29,8 @@
 ul {
 	margin-bottom: 0px;
 }
+
+* {
+	font-family: 'Droid Serif', serif;
+	font-size: 14px;
+}
