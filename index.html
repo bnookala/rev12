@@ -8,9 +8,12 @@
     </head>
     <body>
         <div class="container resume">
+            <div id="fb-root"></div>
             <div class="details">
-                <div class="span11 name">
+                <div class="span10 name">
                     <h1>Bhargav Nookala</h1>
+                </div>
+                <div class="span1 fb-subscribe" data-href="https://www.facebook.com/bnookala" data-layout="button_count" data-show-faces="false" data-font="segoe ui" data-width="450">
                 </div>
                 <div class="span1 follow-twitter">
                     <a href="https://twitter.com/bhargav" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @bhargav</a>
@@ -255,6 +258,17 @@
                     fjs.parentNode.insertBefore(js,fjs);
                 }
             }(document,"script","twitter-wjs");
+        </script>
+
+        <!-- Facbeook -->
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=114944811942190";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
     </body>
 </html>
