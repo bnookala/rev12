@@ -5,26 +5,28 @@ $(document).ready(function () {
 		placement: 'bottom'
 	});
 
-	$('html').delegate('.location', 'hover', function () {
-		var container = $(this);
-		var mapContainer = [
-			'<div id="map" data-lat=',
-			container.data('lat'),
-			' data-long=',
-			container.data('long'),
-			'></div>'
-		].join('');
+	$('html').delegate('.location', 'hover', function (event) {
+		if (event.type === "mouseenter") {
+			var container = $(this);
+			var mapContainer = [
+				'<div id="map" data-lat=',
+				container.data('lat'),
+				' data-long=',
+				container.data('long'),
+				'></div>'
+			].join('');
 
-		container.popover({
-			html: true,
-			content: mapContainer,
-			title: container.data('map-title'),
-			placement: 'bottom'
-		});
-		container.popover('show');
+			container.popover({
+				html: true,
+				content: mapContainer,
+				title: container.data('map-title'),
+				placement: 'bottom'
+			});
+			container.popover('show');
+		}
 	});
 
-	$('html').delegate('.popover', 'DOMNodeInserted', function () {
+	$('html').delegate('.popover', 'DOMNodeInserted', function (event) {
 		var container = $(this);
 		if (container.find('.leaflet-container').length === 0) {
 			var mapContainer = $('#map');
