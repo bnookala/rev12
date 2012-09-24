@@ -16,7 +16,7 @@
                 </div>
                 <div class="span1 social-buttons">
                     <div class="follow-twitter">
-                        <a href="https://twitter.com/bhargav" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @bhargav</a>
+                        <a href="https://twitter.com/bhargav" class="twitter-follow-button" data-show-count="true" data-size="large" data-show-screen-name="false">Follow @bhargav</a>
                     </div>
                 </div>
                 <div class="row contact-info">
@@ -233,6 +233,7 @@
         </div>
         <script src="./static/js/jquery.min.js"></script> 
         <script src="./static/js/bootstrap.min.js"></script> 
+        <script src="./static/js/resume.js"></script>
 
         <!-- Google Analytics -->
         <script type="text/javascript">
@@ -255,7 +256,8 @@
                 var js,fjs=d.getElementsByTagName(s)[0];
                 if(!d.getElementById(id)){
                     js=d.createElement(s);
-                    js.id=id;js.src="//platform.twitter.com/widgets.js";
+                    js.id=id;
+                    js.src="//platform.twitter.com/widgets.js";
                     fjs.parentNode.insertBefore(js,fjs);
                 }
             }(document,"script","twitter-wjs");
