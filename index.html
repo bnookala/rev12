@@ -5,6 +5,10 @@
         <link href="./static/css/bootstrap.min.css" rel="stylesheet">
         <link href="./static/css/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="./static/css/resume.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.ie.css" />
+        <![endif]-->
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     </head>
     <body>
@@ -42,8 +46,8 @@
                         <div class="span7 school-name">
                             University of Illinois at Urbana-Champaign
                         </div>
-                        <div class="span3 school-location">
-                            Urbana-Champaign, IL
+                        <div class="span3 location school-location" data-map-title="Urbana, IL" data-lat="40.106", data-long="-88.22">
+                            Urbana, IL
                         </div>
                         <div class="span10 school-description">
                             B.S., Linguistics, Computer Science; Graduation: December 2011
@@ -61,7 +65,7 @@
                         <div class="span7 job-name">
                             Yelp, Inc.
                         </div>
-                        <div class="span3 job-location">
+                        <div class="span3 location job-location" data-map-title="San Francisco, CA" data-lat="37.77" data-long="-122.40">
                             San Francisco, CA
                         </div>
                         <div class="span7 job-title">
@@ -86,7 +90,7 @@
                         <div class="span7 offset2 job-name">
                             University of Illinois Computer Science department
                         </div>
-                        <div class="span3 job-location">
+                        <div class="span3 location job-location" data-map-title="Urbana, IL" data-lat="40.106", data-long="-88.22">
                             Urbana, IL
                         </div>
                         <div class="span7 offset2 job-title">
@@ -104,7 +108,7 @@
                         <div class="span7 offset2 job-name">
                             VMware Inc.
                         </div>
-                        <div class="span3 job-location">
+                        <div class="span3 location job-location" data-map-title="Palo Alto, CA" data-lat="37.44", data-long="-122.145">
                             Palo Alto, CA
                         </div>
                         <div class="span7 offset2 job-title">
@@ -261,5 +265,8 @@
                 }
             }(document,"script","twitter-wjs");
         </script>
+
+        <!-- leaflet -->
+        <script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
     </body>
 </html>

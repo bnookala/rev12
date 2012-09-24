@@ -34,3 +34,7 @@ ul {
 	font-family: 'Droid Serif', serif;
 	font-size: 14px;
 }
+
+#map {
+	height: 175px;
+}
