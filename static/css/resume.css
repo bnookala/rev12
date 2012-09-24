@@ -30,7 +30,7 @@ ul {
 	margin-bottom: 0px;
 }
 
-* {
+*, .popover-content > * {
 	font-family: 'Droid Serif', serif;
 	font-size: 14px;
 }
