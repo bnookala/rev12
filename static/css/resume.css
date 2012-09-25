@@ -35,6 +35,10 @@ ul {
 	font-size: 14px;
 }
 
+.row {
+	margin-bottom: 15px;
+}
+
 #map {
 	height: 175px;
 }
