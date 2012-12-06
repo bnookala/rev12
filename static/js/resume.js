@@ -1,8 +1,21 @@
 $(document).ready(function () {
-	$('.follow-twitter').popover({
-		content: 'In development...',
-		title: 'Tweets',
-		placement: 'bottom'
+	$('html').delegate('.follow-twitter', 'hover', function (event) {
+		if (event.type === "mouseenter") {
+			var container = $(this);
+			var tweetsContainer = [
+				'<div id="tweets" data-follow-twitter=',
+				container.data('follow-twitter'),
+				'></div>'
+			].join('');
+
+			container.popover({
+				html: true,
+				content: tweetsContainer,
+				title: 'Tweets',
+				placement: 'bottom'
+			});
+			container.popover('show');
+		}
 	});
 
 	$('html').delegate('.location', 'hover', function (event) {
@@ -28,8 +41,9 @@ $(document).ready(function () {
 
 	$('html').delegate('.popover', 'DOMNodeInserted', function (event) {
 		var container = $(this);
-		if (container.find('.leaflet-container').length === 0) {
-			var mapContainer = $('#map');
+		var tweetsContainer = container.find('#tweets');
+		if (!container.find('.leaflet-container').length && !tweetsContainer.length) {
+			var mapContainer = container.find('#map');
 			var mapLat = parseFloat(mapContainer.data('lat'));
 			var mapLong = parseFloat(mapContainer.data('long'));
 			var map = L.map(
@@ -47,8 +61,10 @@ $(document).ready(function () {
 				}
 			);
 			map.setView([mapLat, mapLong], 10);
-			L.tileLayer('http://{s}.tile.cloudmade.com/531cdd7137d247de8a2f7a635f2a869c/997/256/{z}/{x}/{y}.png', {
-			}).addTo(map);
+			L.tileLayer(
+				'http://{s}.tile.cloudmade.com/531cdd7137d247de8a2f7a635f2a869c/997/256/{z}/{x}/{y}.png',
+				{}
+			).addTo(map);
 			L.marker([mapLat, mapLong]).addTo(map);
 		}
 	});
